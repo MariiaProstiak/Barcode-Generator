@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <link rel="apple-touch-icon" sizes="180x180" href="./img/icon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./img/icon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./img/icon/favicon-16x16.png">
+   <link rel="manifest" href="./img/icon/site.webmanifest">
+   <title>QR generator</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <span>Online</span>
+         <span>Barcode</span>
+         <span>Generator</span>
+      </header>
+
+      <main class="main">
+         <div class="info_block" id="QR">
+            <label for="qrcode">Parametres for QRcode: </label>
+            <textarea class="info_block__text" name="qrcode" id="inputText" cols="30" rows="10"
+               placeholder="Enter your text or link to code"></textarea>
+            <button type="button" class="slide" onclick="generateQRCode()">Cut down</button>
+         </div>
+         <div class="code_result">
+            <div id="qrcode" class="qrcode"></div>
+            <div class="buttons">
+               <button type="button" class="fill" onclick="qrPNG()">Download<br>PNG</button>
+               <button type="button" class="fill" onclick="qrSVG()">Download<br>SVG</button>
+            </div>
+
+         </div>
+      </main>
+
+      <footer class="footer">
+         <!-- Copyright -->
+         <!-- ❤️  -->
+         <div class="footer-copyright text-center">&copy; Developed with ❤️ <i class="fas fa-heart"
+               aria-hidden="true"></i> by
+            <a href="#" class="white-text">M Prostiak</a>
+            <!-- Copyright -->
+      </footer>
+   </div>
+
+
+   <script src="/libs/qrcode.min.js"></script>
+   <script src="/libs/JsBarcode.all.min.js"></script>
+   <script src="script.js"></script>
+</body>
+
+</html>

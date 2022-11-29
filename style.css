@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lato:ital,wght@0,400;0,700;1,400&family=Lobster+Two:ital@1&family=Michroma&family=Public+Sans&display=swap');
+
+
+html,
+body {
+   position: relative;
+   height: 100%;
+}
+
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+.header span:nth-child(1) {
+   margin-bottom: -23px;
+   font-family: 'Lobster Two', cursive;
+   font-style: italic;
+   font-size: 35px;
+   color: rgb(3, 198, 247);
+}
+
+.header span:nth-child(2) {
+   font-family: 'DM Serif Display', serif;
+   font-size: 30px;
+   color: rgb(0, 6, 7);
+}
+
+.header span:nth-child(3) {
+   margin-top: -17px;
+   font-family: 'Michroma', sans-serif;
+   font-size: 20px;
+}
+
+.main {
+   flex: 1 1 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.info_block {
+   background: rgb(248, 124, 43);
+   background: linear-gradient(180deg, rgba(248, 124, 43, 1) 52%, rgba(184, 53, 12, 1) 98%);
+   position: relative;
+   width: 300px;
+   height: 300px;
+   box-sizing: border-box;
+   border-radius: 10px;
+   z-index: 10;
+   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px, rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   ;
+}
+
+
+.info_block label {
+   margin: 5px;
+   display: block;
+   font-family: 'Public Sans', sans-serif;
+   font-size: 20px;
+   color: #fff;
+}
+
+
+.info_block__text {
+   display: block;
+   width: 90%;
+   margin: 10px;
+   resize: none;
+   font-size: 14px;
+   color: #ffffff;
+
+   border-radius: 5px;
+   background: #e1541a;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.info_block__text::placeholder {
+   color: #d3d3d3;
+   font-size: 14px;
+}
+
+.code_result {
+   background: #ffffff;
+   width: 280px;
+   transition: all 1s ease 0s;
+   transform: translateY(-77%);
+   z-index: 8;
+   display: block;
+}
+
+.code_result.active {
+   transform: translateY(-4%);
+}
+
+.code_result.fly {
+   transform: translateX(400%);
+
+}
+
+
+.qrcode {
+   height: 240px;
+   background: url(/img/paper.png);
+   background-repeat: no-repeat;
+   background-position: 37px 0px;
+   background-size: contain;
+}
+
+.qrcode img {
+   position: relative;
+   width: 125px;
+   top: 55px;
+   left: 75px;
+}
+
+.buttons {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   opacity: 0;
+   transition: all 0.3s ease 0s;
+}
+
+.buttons.visible {
+   opacity: 1;
+}
+
+.slide {
+   font-family: Hack, monospace;
+   background: #a31702;
+   color: #ffffff;
+   cursor: pointer;
+   font-size: 16px;
+   padding: 15px;
+   border: 0;
+   transition: all 0.5s;
+   border-radius: 10px;
+   width: auto;
+   position: relative;
+   left: 33%;
+}
+
+.slide::after {
+   content: "\276F";
+   font-weight: 400;
+   position: absolute;
+   left: 85%;
+   top: 31%;
+   right: 5%;
+   bottom: 0;
+   opacity: 0;
+
+}
+
+.slide:hover {
+   background: #b72c06;
+   transition: all 0.5s;
+   border-radius: 10px;
+   box-shadow: 0px 6px 15px #910101;
+   padding: 15px 30px 15px 15px;
+
+
+}
+
+.slide:hover::after {
+   opacity: 1;
+   transition: all 0.5s;
+}
+
+
+.fill {
+   font-family: Hack, monospace;
+   background: #d3d3d3;
+   color: #2c2c2c;
+   cursor: pointer;
+   font-size: 16px;
+   padding: 10px;
+   border: 0;
+   transition: all 0.5s;
+   border-radius: 10px;
+   width: auto;
+   position: relative;
+   min-width: 130px;
+}
+
+.fill::after {
+   content: "\21E9";
+   font-weight: 500;
+   position: absolute;
+   left: 85%;
+   top: 54%;
+   right: 0;
+   bottom: 0;
+   opacity: 0;
+   transform: translate(-50%, -50%);
+
+}
+
+.fill:hover {
+   background: #b72c06;
+   box-shadow: 0px 6px 15px #910101;
+   transition: all 0.5s;
+   border-radius: 10px;
+   padding: 10px 20px;
+   color: #ffffff;
+}
+
+.fill:hover::after {
+   opacity: 1;
+   transition: all 0.5s;
+   color: #ffffff;
+
+}
+
+
+.footer {
+   font-size: 12px;
+   bottom: 0;
+   width: 100%;
+   height: 20px;
+   /* Set the fixed height of the footer here */
+   background-color: #f5f5f5;
+   text-align: center;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+   border-bottom: 1px solid;
+
+}
+
+a:hover {
+   border-bottom: 1px transparent;
+}
