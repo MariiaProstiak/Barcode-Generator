@@ -110,7 +110,7 @@ body {
 
 .qrcode {
    height: 240px;
-   background: url(/paper.png);
+   background: url(./img/paper.png);
    background-repeat: no-repeat;
    background-position: 37px 0px;
    background-size: contain;
