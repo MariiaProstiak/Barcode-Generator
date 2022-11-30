@@ -48,6 +48,63 @@ body {
    align-items: center;
 }
 
+
+/*___________________________________________________*/
+/* Style the tab */
+.tab {
+   position: relative;
+   left: -50px;
+   overflow: hidden;
+
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+   font-family: Hack, monospace;
+   background: #d3d3d3;
+   color: #2c2c2c;
+   cursor: pointer;
+   font-size: 14px;
+   float: left;
+   border: none;
+   overflow: hidden;
+   border-radius: 5px 10px 0 0;
+   cursor: pointer;
+   padding: 8px 16px;
+   transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+   background: #fc5629;
+   color: #ffffff;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+   background-color: rgb(248, 124, 43);
+   color: #ffffff;
+}
+
+/* Create an active/current tablink class */
+.tab button.active:hover {
+   background: #fc5629;
+   color: #ffffff;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* Style the tab content */
+.tabcontent {
+   display: none;
+}
+
+.tabcontent.active {
+   display: block;
+}
+
+/*___________________________________________________*/
+
 .info_block {
    background: rgb(248, 124, 43);
    background: linear-gradient(180deg, rgba(248, 124, 43, 1) 52%, rgba(184, 53, 12, 1) 98%);
@@ -62,7 +119,7 @@ body {
 }
 
 
-.info_block label {
+.main_label {
    margin: 5px;
    display: block;
    font-family: 'Public Sans', sans-serif;
@@ -70,6 +127,13 @@ body {
    color: #fff;
 }
 
+label {
+   margin: 5px;
+   display: inline-block;
+   font-family: 'Public Sans', sans-serif;
+   font-size: 14px;
+   color: #fff;
+}
 
 .info_block__text {
    display: block;
@@ -87,6 +151,19 @@ body {
 .info_block__text::placeholder {
    color: #d3d3d3;
    font-size: 14px;
+}
+
+.typeBar {
+   display: block;
+   width: 90%;
+   margin: 10px;
+   resize: none;
+   font-size: 12px;
+   color: #ffffff;
+
+   border-radius: 5px;
+   background: #e1541a;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .code_result {
@@ -116,7 +193,25 @@ body {
    background-size: contain;
 }
 
+
+
 .qrcode img {
+   position: relative;
+   width: 125px;
+   top: 55px;
+   left: 75px;
+}
+
+.qrcode img#barcode {
+   position: relative;
+   width: 170px;
+   top: 30px;
+   left: 54px;
+}
+
+
+
+.qrcode svg {
    position: relative;
    width: 125px;
    top: 55px;
